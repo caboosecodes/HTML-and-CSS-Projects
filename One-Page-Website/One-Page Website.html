@@ -3,6 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<title>FTP Bakery</title>
+		<link rel="stylesheet" type="text/css" href="css/imagebox.css">
+		<script src="JS/one_page_website.js" defer></script>
 	</head>
 	
 	<!-- HEADER -->
@@ -25,14 +27,14 @@
 		
 		<!-- GALLERY -->
 		<section>
-			<div id="gallery">
+			<div class="row" id="gallery">
 				<h1>Gallery</h1>
 				<div>
 				
 					<!-- PHOTO CONTAINER 1 -->
 					<div>
 						<div>
-							<img src="./images/thumbnails/plum_almond_tart.jpg" width="500" height="600" alt="plum tart">
+							<img src="./images/thumbnails/plum_almond_tart.jpg" onclick="openModal();currentSlide(1)" width="500" height="600" alt="plum tart">
 							<div>
 								<h3>Click to Englarge</h3>
 								<p>Plum Tart</p>
@@ -44,7 +46,7 @@
 					<!-- PHOTO CONTAINER 2 -->
 					<div>
 						<div>
-							<img src="./images/thumbnails/starwberry_tart.jpg" width="500" height="600" alt="strawberry tart">
+							<img src="./images/thumbnails/strawberry_tart.jpg" onclick="openModal();currentSlide(2)" width="500" height="600" alt="strawberry tart">
 							<div>
 								<h3>Click to Englarge</h3>
 								<p>Strawberry Tart</p>
@@ -56,7 +58,7 @@
 					<!-- PHOTO CONTAINER 3 -->
 					<div>
 						<div>
-							<img src="./images/thumbnails/apple_pie.jpg" width="500" height="600" alt="apple pie">
+							<img src="./images/thumbnails/apple_pie.jpg" onclick="openModal();currentSlide(3)" width="500" height="600" alt="apple pie">
 							<div>
 								<h3>Click to Englarge</h3>
 								<p>Apple Pie</p>
@@ -68,7 +70,7 @@
 					<!-- PHOTO CONTAINER 4 -->
 					<div>
 						<div>
-							<img src="./images/thumbnails/apple_tarte_tatin_2.jpg" width="500" height="600" alt="apple tatin">
+							<img src="./images/thumbnails/apple_tarte_tatin_2.jpg" onclick="openModal();currentSlide(4)" width="500" height="600" alt="apple tatin">
 							<div>
 								<h3>Click to Englarge</h3>
 								<p>Apple Tarte Tatin</p>
@@ -80,7 +82,7 @@
 					<!-- PHOTO CONTAINER 5 -->
 					<div>
 						<div>
-							<img src="./images/thumbnails/cinnamon_rolls.jpg" width="500" height="600" alt="cinnamon rolls">
+							<img src="./images/thumbnails/cinnamon_rolls.jpg" onclick="openModal();currentSlide(5)" width="500" height="600" alt="cinnamon rolls">
 							<div>
 								<h3>Click to Englarge</h3>
 								<p>Cinnamon Rolls</p>
@@ -92,7 +94,7 @@
 					<!-- PHOTO CONTAINER 6 -->
 					<div>
 						<div>
-							<img src="./images/thumbnails/pecan_pie.jpg" width="500" height="600" alt="pecan pie">
+							<img src="./images/thumbnails/pecan_pie.jpg" onclick="openModal();currentSlide(6)" width="500" height="600" alt="pecan pie">
 							<div>
 								<h3>Click to Englarge</h3>
 								<p>Pecan Pie</p>
@@ -104,7 +106,7 @@
 					<!-- PHOTO CONTAINER 7 -->
 					<div>
 						<div>
-							<img src="./images/thumbnails/nutella_star.jpg" width="500" height="600" alt="nutella star">
+							<img src="./images/thumbnails/nutella_star.jpg" onclick="openModal();currentSlide(7)" width="500" height="600" alt="nutella star">
 							<div>
 								<h3>Click to Englarge</h3>
 								<p>Nutella Star</p>
@@ -116,7 +118,7 @@
 					<!-- PHOTO CONTAINER 8 -->
 					<div>
 						<div>
-							<img src="./images/thumbnails/cinnamon_brioche.jpg" width="500" height="600" alt="cinnamon swirl brioche">
+							<img src="./images/thumbnails/cinnamon_brioche.jpg" onclick="openModal();currentSlide(8)" width="500" height="600" alt="cinnamon swirl brioche">
 							<div>
 								<h3>Click to Englarge</h3>
 								<p>Cinnamon Swirl Brioche</p>
@@ -128,7 +130,7 @@
 					<!-- PHOTO CONTAINER 9 -->
 					<div>
 						<div>
-							<img src="./images/thumbnails/orange_chiffon.jpg" width="500" height="600" alt="orange chiffon cake">
+							<img src="./images/thumbnails/orange_chiffon.jpg" onclick="openModal();currentSlide(9)" width="500" height="600" alt="orange chiffon cake">
 							<div>
 								<h3>Click to Englarge</h3>
 								<p>Orange Chiffon Cake</p>
@@ -140,7 +142,7 @@
 					<!-- PHOTO CONTAINER 10 -->
 					<div>
 						<div>
-							<img src="./images/thumbnails/pizza_1.jpg" width="500" height="600" alt="pizza">
+							<img src="./images/thumbnails/pizza_1.jpg" onclick="openModal();currentSlide(10)" width="500" height="600" alt="pizza">
 							<div>
 								<h3>Click to Englarge</h3>
 								<p>Pepperoni Pizza</p>
@@ -152,7 +154,7 @@
 					<!-- PHOTO CONTAINER 11 -->
 					<div>
 						<div>
-							<img src="./images/thumbnails/pizza_2.jpg" width="500" height="600" alt="pizza slice">
+							<img src="./images/thumbnails/pizza_2.jpg" onclick="openModal();currentSlide(11)" width="500" height="600" alt="pizza slice">
 							<div>
 								<h3>Click to Englarge</h3>
 								<p>Pizza Slice</p>
@@ -160,7 +162,122 @@
 						</div>
 					</div>
 					<!-- END PHOTO CONTAINER -->
-					
+
+					<!-- Modal/Lightbox -->
+					<div id="myModal" class="modal">
+						<span class="close cursor" onclick="closeModal()">&times;</span>
+						<div class="modal-content">
+
+							<div class="mySlides">
+								<div class="numbertext">1 / 11</div>
+								<img src="./images/thumbnails/plum_almond_tart.jpg" style="width: 100%;">
+							</div>
+
+							<div class="mySlides">
+								<div class="numbertext">2 / 11</div>
+								<img src="./images/thumbnails/strawberry_tart.jpg" style="width: 100%;">
+							</div>
+
+							<div class="mySlides">
+								<div class="numbertext">3 / 11</div>
+								<img src="./images/thumbnails/apple_pie.jpg" style="width: 100%;">
+							</div>
+
+							<div class="mySlides">
+								<div class="numbertext">4 / 11</div>
+								<img src="./images/thumbnails/apple_tarte_tatin_2.jpg" style="width: 100%;">
+							</div>
+
+							<div class="mySlides">
+								<div class="numbertext">5 / 11</div>
+								<img src="./images/thumbnails/cinnamon_rolls.jpg" style="width: 100%;">
+							</div>
+
+							<div class="mySlides">
+								<div class="numbertext">6 / 11</div>
+								<img src="./images/thumbnails/pecan_pie.jpg" style="width: 100%;">
+							</div>
+
+							<div class="mySlides">
+								<div class="numbertext">7 / 11</div>
+								<img src="./images/thumbnails/nutella_star.jpg" style="width: 100%;">
+							</div>
+
+							<div class="mySlides">
+								<div class="numbertext">8 / 11</div>
+								<img src="./images/thumbnails/cinnamon_brioche.jpg" style="width: 100%;">
+							</div>
+
+							<div class="mySlides">
+								<div class="numbertext">9 / 11</div>
+								<img src="./images/thumbnails/orange_chiffon.jpg" style="width: 100%;">
+							</div>
+
+							<div class="mySlides">
+								<div class="numbertext">10 / 11</div>
+								<img src="./images/thumbnails/pizza_1.jpg" style="width: 100%;">
+							</div>
+
+							<div class="mySlides">
+								<div class="numbertext">11 / 11</div>
+								<img src="./images/thumbnails/pizza_2.jpg" style="width: 100%;">
+							</div>
+							
+							<!-- next/previous controls -->
+							<a class="prev" onclick="plusSlides(-1)">&#10094</a>
+							<a class="next" onclick="plusSlides(1)">&#10095</a>
+
+							<!-- caption text -->
+							<div class="caption-container">
+								<p id="caption"></p>
+							</div>
+
+							<!-- thumbnail image controls -->
+							<div class="column">
+								<img class="demo" src="./images/thumbnails/plum_almond_tart.jpg" onclick="currentSlide(1)" alt="Almond Tart">
+							</div>
+
+							<div class="column">
+								<img class="demo" src="./images/thumbnails/strawberry_tart.jpg" onclick="currentSlide(2)" alt="Strawberry Tart">
+							</div>
+
+							<div class="column">
+								<img class="demo" src="./images/thumbnails/apple_pie.jpg" onclick="currentSlide(3)" alt="Apple Pie">
+							</div>
+
+							<div class="column">
+								<img class="demo" src="./images/thumbnails/apple_tarte_tatin_2.jpg" onclick="currentSlide(4)" alt="Apple Tatin">
+							</div>
+
+							<div class="column">
+								<img class="demo" src="./images/thumbnails/cinnamon_rolls.jpg" onclick="currentSlide(5)" alt="Cinnamon Rolls">
+							</div>
+
+							<div class="column">
+								<img class="demo" src="./images/thumbnails/pecan_pie.jpg" onclick="currentSlide(6)" alt="Pecan Pie">
+							</div>
+
+							<div class="column">
+								<img class="demo" src="./images/thumbnails//nutella_star.jpg" onclick="currentSlide(7)" alt="Nutella Star">
+							</div>
+
+							<div class="column">
+								<img class="demo" src="./images/thumbnails/cinnamon_brioche.jpg" onclick="currentSlide(8)" alt="Cinnamon Brioche">
+							</div>
+
+							<div class="column">
+								<img class="demo" src="./images/thumbnails/orange_chiffon.jpg" onclick="currentSlide(9)" alt="Orange Chiffon Cake">
+							</div>
+
+							<div class="column">
+								<img class="demo" src="./images/thumbnails/pizza_1.jpg" onclick="currentSlide(10)" alt="Pizza">
+							</div>
+
+							<div class="column">
+								<img class="demo" src="./images/thumbnails/pizza_2.jpg" onclick="currentSlide(11)" alt="Pizza crumb">
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
