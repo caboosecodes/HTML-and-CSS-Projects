@@ -80,7 +80,7 @@ q   {
 /* Image elements */
 img {
     filter: sepia(75%); /*sepia filter over images*/
-    border-radius: 5px;
+    border-radius: 8px;
     max-width: 100%; /*makes the images stay in their container*/ 
     height: 340px;
     display: block; /*block display ensures that we can center our images*/
@@ -284,7 +284,7 @@ footer {
     height: 1vw;
     width: 1vw;
     margin: .25vw;
-    background-color: white;
+    background-color: whitesmoke;
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
@@ -293,7 +293,7 @@ footer {
 
 /*hover effect over dots */
 .active, .dot:hover {
-    background-color: black; /* Sets the color of the dots when active or hovered over */
+    background-color: rgb(68, 216, 68); /* Sets the color of the dots when active or hovered over */
 }
 
 /*fading animation for slideshow*/
@@ -323,9 +323,9 @@ footer {
 .column_1   {
     float: left; /* places box to the left and takes up half the screen*/
     width: 50%;
-    padding: 10px;
+    padding: 1.6%;
     padding-top: 3%; /* space betweent the top of the column and the heading */
-    height: 400px;
+    height: 500px;
     background-color: rgb(24, 99, 24);
 }
 
@@ -339,16 +339,10 @@ footer {
 .column_2 {
     float: left;
     width: 50%;
-    padding: 10px;
-    padding-top: 1.9%;
-    height: 400px;
+    padding: 1.6%;
+    padding-top: 5%;
+    height: 500px;
     background-color: rgb(46, 46, 46);
-}
-
-/* overrides the previous styling for the final row to make room for the contact form */
-.column_tall    {
-    padding-top: 3.5%;
-    height: 450px;
 }
 
 /* inserts something AFTER the selected element */
@@ -399,7 +393,8 @@ footer {
 .form-container {
     max-width: 49vw;
     padding: 1vw;
-    background-color: rgb(147, 165, 147);
+    background-color: rgb(46, 46, 46);
+    color: rgb(212, 224, 213);
 }
 
 /*input fields*/
