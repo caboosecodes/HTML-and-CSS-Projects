@@ -1,9 +1,23 @@
 /*============================================================
     GENERAL STYLING
 ============================================================*/
+html {
+    scroll-behavior: smooth;
+}
+
 /* BODY */
 body    {
     margin: 0%;
+    opacity: 1;
+    transition: 3s opacity;
+    letter-spacing: .2vw;
+    font-size: 1.5vw;
+    overflow-x: hidden;
+    user-select: none;
+}
+
+body.fade-out {
+    opacity: .1;
 }
 
 /* Heading one elements */
@@ -23,16 +37,17 @@ h1:hover  {
 /* Styling for portfolio text */
 .white-text {
     color: #fff;
+    padding-top: 10vh;
 }
 
 /* styling for paragraphs */
 p   {
     font-family: Arial, Helvetica, sans-serif;
     text-align: justify;
-    letter-spacing: 1px;
-    font-size: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+    letter-spacing: .1vw;
+    font-size: 1.5vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
     color: rgb(212, 224, 213);
 }
 
@@ -52,7 +67,9 @@ p:hover {
 
 /* anchor elements */
 a   {
-    color: yellow; /*makes sure links are blue*/
+    color: yellow; /*makes sure links are yellow*/
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 /* Quatation elements */
@@ -80,7 +97,7 @@ img:hover   {
 }
 
 /* on screens 576px and smaller the images will 100px tall and centered vertically in a column*/
-@media screen and (max-width)   {
+@media screen and (max-width: 576px)   {
     img {
         height: 100px;
         margin-top: 150px;
@@ -120,10 +137,10 @@ footer {
     float: left;
     display: block; /*ensures that the text will be on one line */
     color: white;
-    padding: 14px 16px;
+    padding: .75vw 1vw;
     text-decoration: none; /* gets rid of the underlines on the navbar links */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 18px;
+    font-size: 1.5vw;
     text-align: center; /*centers the text within the container*/
     position: relative; /* sets the text relative to its normal positioning, allows for the animation to be used */
     -webkit-animation: moveNavText 5.75s;
@@ -178,7 +195,8 @@ footer {
     background:rgba(0,0,0,0.5); /* provides a semi translucent background for text to sit over */
     color: white;
     width: 100%;
-    padding: 20px;
+    height: 100vh;
+    padding: 2vh;
     position: relative;
     -webkit-animation: moveVideoText 5.75s;
     animation: moveVideoText 5.75s;
@@ -190,6 +208,9 @@ footer {
     to {top: 0vw;}
 }
 /* end of video styling */
+
+
+
 
 /* TABLE STYLING */
 *   { /* The asterisk is a universal selector that applies this effect to all elements in the page */
