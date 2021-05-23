@@ -14,6 +14,8 @@
         <!-- Navbar -->
         <div class="navbar">
             <a class="active" href="#home">Home</a>
+            <!-- New section added -->
+            <a href="#slideshow">Slideshow</a>
             <a href="#about">About</a>
             <a href="#github">GitHub</a>
             <a href="#contact">Contact</a>
@@ -49,6 +51,52 @@
             </strong>
         </div>
 
+        <!-- Slideshow section -->
+        <div id="slideshow">
+            <div id="slideshow_background">
+                <div id="slideshow_container">
+                    <!-- slide 1 of 5 -->
+                    <div class="mySlides fade">
+                        <img class="slideshow_images" src="./images/me.jpg" alt="Picture of myself">
+                        <div class="text">I'm available to assist you on your project!</div>
+                    </div>
+                    <!-- slide 2 of 5 -->
+                    <div class="mySlides fade">
+                        <img class="slideshow_images" src="./images/Python.png" alt="python">
+                        <div class="text">I'm a software developer trained in: python</div>
+                    </div>
+                    <!-- slide 3 of 5 -->
+                    <div class="mySlides fade">
+                        <img class="slideshow_images" src="./images/C_Sharp_and_Dot_NET.png" alt="C#, .NET Framework">
+                        <div class="text">C#, .NET Framework, ASP.NET, MVC</div>
+                    </div>
+                    <!-- slide 4 of 5 -->
+                    <div class="mySlides fade">
+                        <img class="slideshow_images" src="./images/SQL_and_Database.jpg" alt="SQL">
+                        <div class="text">back end development, databases and SQL</div>
+                    </div>
+                    <!-- slide 5 of 5-->
+                    <div class="mySlides fade">
+                        <img class="slideshow_images" src="./images/contact_me.jpeg" alt="contact pic">
+                        <div class="text"><a class="white-text" onclick="openForm()" href="#contact">Contact me now!</a></div>
+                    </div>
+                    <!-- Previous and next buttons -->
+                    <a class="previous" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br> <!-- adds space between the slideshow and dots -->
+
+                <!-- Slideshow dots -->
+                <div style="text-align: center;">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                </div>
+            </div>
+        </div>
+
         <!-- about section -->
         <div class="row" id="about">
             <!-- left column -->
@@ -59,7 +107,7 @@
             <div class="column_1">
                 <h1>About</h1>
                 <p>
-                    I am aspiring software developer who loves to learn new things. I enjoy baking/cooking and playing guitar.
+                    I am an aspiring software developer who loves to learn new things. I enjoy baking/cooking and playing guitar.
                     <br>
                     <br>I am a graduate of <a href="http://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>'s Software Developer Boot Camp, and trained and experienced in the following languages: HTML, CSS, JavaScript, SQL, C#, and more.
                     <br>
