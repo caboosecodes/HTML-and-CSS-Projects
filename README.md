@@ -14,7 +14,6 @@ It is styled using CSS and contains:
  3. form
  4. animations
 
-*** Portfolio website has been updated with Javascript ***
 Please visit http://www.ricardolopezdev.com to see it in action
 
 # Bakery Website
